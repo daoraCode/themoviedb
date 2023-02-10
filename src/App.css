@@ -4,3 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}

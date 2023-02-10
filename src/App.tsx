@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 
-function App() {
+import axios from "axios";
+
+
+interface Props {}
+
+const App = (props: Props) => {
+
+  const [data, setData] = useState([])
+  const api_key = 'd14382c5a44b7e8dda1bce4d97804f6e';
+  
+  // hooks
+  const fetchMovieCategoryData = () => {
+    
+    axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}&language=us-US`)
+    .then((res) => {
+      console.log(res.data)
+      setData(res.data.genres)
+    })
+    .catch((error) => console.log(error))
+    };
+
+    useEffect(() => {
+      fetchMovieCategoryData();
+    }, []);  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    {data.map((element: any) => {
+        return (
+          <div key={element.id}>
+            <p>{element.name}</p>
+            <p>{element.id}</p>
+          </div>
+        );
+      })}
     </div>
-  );
+    )
 }
 
 export default App;

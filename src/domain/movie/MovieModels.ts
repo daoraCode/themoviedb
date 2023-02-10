@@ -6,7 +6,7 @@ export interface MovieType {
     posterUrl: string;
 }
 
-export interface MovieDetailsType {
+export interface MovieDetailType {
     id: number;
     title: string;
     posterUrl: string;

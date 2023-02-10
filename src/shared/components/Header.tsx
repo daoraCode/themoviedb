@@ -7,10 +7,9 @@ export const Header = () => {
     <div className="header">
       <h1>MovieDB</h1>
       <img src={logo} alt="logo app" width={50} height={50}/>
-      {/* <img src="images/logo.png" alt="logo app" /> */}
       <div>
-        <input className= "search" type= "text"/>
-        <input className= "submit" type= "submit"/>
+        <input className= "search" type= "text" placeholder= "Type a movie title"/>
+        <input className= "submit" type= "submit" value= "search"/>
       </div>
     </div>
   )

@@ -17,6 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env.REACT_APP_API_KEY = d14382c5a44b7e8dda1bce4d97804f6e
 
 npm-debug.log*
 yarn-debug.log*

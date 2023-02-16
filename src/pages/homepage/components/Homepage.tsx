@@ -9,6 +9,8 @@ export const Homepage = () => {
 
   const axiosData = async () => {
     const res = await getMoviesAll();
+    console.log(res)
+    
     setMovies(res);
   };
   useEffect(() => {
@@ -20,7 +22,7 @@ export const Homepage = () => {
       {movies?.map((movie: MovieType) => (
         <div key={movie.id}>
           <img
-            src={"https://image.tmdb.org/t/p/w500" + movie.posterUrl}
+            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
             alt={movie.title}
           />
           <h2>{movie.title}</h2>

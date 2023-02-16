@@ -3,7 +3,7 @@ import React from 'react';
 export interface MovieType {
     id: number;
     title: string;
-    posterUrl: string;
+    poster_path: string;
 }
 
 export interface MovieDetailType {

@@ -8,7 +8,7 @@ type MovieProps = {
 export const Movie = ({movie}: MovieProps) => {
     return (
         <div>
-            <img src={movie.posterUrl} alt="posterMovie" />
+            <img src={movie.poster_path} alt="posterMovie" />
             <h1>{movie.title}</h1>
         </div>
     )

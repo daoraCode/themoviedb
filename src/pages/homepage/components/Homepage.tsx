@@ -5,13 +5,15 @@ import { useState, useEffect } from "react";
 import { getMoviesAll } from "../../../domain/movie/MovieApi";
 
 export const Homepage = () => {
-  const [movies, setMovies] = useState<MovieType[] | void>([]);
+  const [movies, setMovies] = useState<MovieType[]>([]);
 
   const axiosData = async () => {
     const res = await getMoviesAll();
-    console.log(res)
-    
-    setMovies(res);
+    console.log(res);
+
+    if(res != null) {
+        setMovies(res);
+    }
   };
   useEffect(() => {
     axiosData();
@@ -19,13 +21,9 @@ export const Homepage = () => {
 
   return (
     <div>
-      {movies?.map((movie: MovieType) => (
-        <div key={movie.id}>
-          <img
-            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-            alt={movie.title}
-          />
-          <h2>{movie.title}</h2>
+      {movies?.map((item) => (
+        <div key= {item.id}> 
+        <Movie movie={item} />
         </div>
       ))}
     </div>

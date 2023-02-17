@@ -3,6 +3,7 @@ import { MovieType } from "../../../domain/movie/MovieModels";
 import { Movie } from "./Movie";
 import { useState, useEffect } from "react";
 import { getMoviesAll } from "../../../domain/movie/MovieApi";
+import "./Homepage.css";
 
 export const Homepage = () => {
   const [movies, setMovies] = useState<MovieType[]>([]);
@@ -20,7 +21,7 @@ export const Homepage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movieGrid">
       {movies?.map((item) => (
         <div key= {item.id}> 
         <Movie movie={item} />

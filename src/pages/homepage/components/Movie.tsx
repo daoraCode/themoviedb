@@ -1,5 +1,6 @@
 import React from 'react';
 import { MovieType } from '../../../domain/movie/MovieModels';
+import "./Movie.css"
 
 type MovieProps = {
     movie: MovieType;
@@ -7,10 +8,12 @@ type MovieProps = {
 
 export const Movie = ({movie}: MovieProps) => {
     return (
-        <div>
+        <main className='containerCards'>
+        <div className='movieCard'>
            <img src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt='poster'/>
-            <h1>{movie.title}</h1>
+            <p className="titleMovie">{movie.title}</p>
         </div>
+        </main>
     )
 }
 

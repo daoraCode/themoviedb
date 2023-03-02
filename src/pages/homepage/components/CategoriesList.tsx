@@ -1,10 +1,10 @@
-// import React from 'react'
-import { Category } from "./Category"
-import { CategoryType } from "../../../domain/category/CategoryType"
+import React from 'react'
+import { Category } from "./Category";
+import { CategoryType } from "../../../domain/category/CategoryType";
 
 type CategoriesListProps = {
   categories: CategoryType[];
-}
+};
 
 export const CategoriesList = ({ categories }: CategoriesListProps) => {
   return (
@@ -15,5 +15,5 @@ export const CategoriesList = ({ categories }: CategoriesListProps) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};

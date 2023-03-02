@@ -1,5 +1,8 @@
 import React from "react";
+
 import { MovieType, MovieDetailType } from "./MovieModels";
+
+// axios
 import axios from "axios";
 
 const apiKey = process.env.REACT_APP_API_KEY
@@ -18,12 +21,12 @@ export const getMoviesAll = async () => {
     });
 };
 
-export const getMovieDetail = async (id: number) => {
+export const getMovieDetail = async (id: string) => {
   const MovieURL = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=fr-FR`;
 
   return axios
-    .get<{ results: MovieDetailType[] }>(MovieURL)
-    .then((response) => response.data.results)
+    .get(MovieURL)
+    .then((response) => response.data)
     .catch((error) => {
       console.log(error);
     });

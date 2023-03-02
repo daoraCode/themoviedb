@@ -49,6 +49,7 @@ export const Homepage = () => {
         <Movie movie={item} />
         </div>
       ))}
+      </div>
     </div>
   )
 };

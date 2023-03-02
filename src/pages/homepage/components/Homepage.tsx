@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+
 // components
+import { CategoriesList } from "./CategoriesList";
 import { Movie } from "./Movie";
 
 // api
@@ -39,11 +41,14 @@ export const Homepage = () => {
 
   return (
     <div>
-      {movies?.map((item) => (
-        <div key= {item.id}> 
-        <Movie movie={item} />
-        </div>
-      ))}
+      <CategoriesList categories={categories}/> 
+      <div>
+        {movies?.map((item) => (
+          <div key= {item.id}> 
+          <Movie movie={item} />
+          </div>
+        ))}
+      </div>
     </div>
-  );
+  )
 };

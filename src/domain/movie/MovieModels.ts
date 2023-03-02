@@ -9,9 +9,12 @@ export interface MovieType {
 export interface MovieDetailType {
     id: number;
     title: string;
-    posterUrl: string;
+    poster_path: string;
     overview: string;
-    categories: object[];
-    releaseDate : string;
-    voteAverage: number;
+    genres: [{
+        id: number,
+        name: string
+    }];
+    release_date : string;
+    vote_average: number;
 }

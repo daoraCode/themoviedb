@@ -1,6 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
 
 // components
 import { CategoriesList } from "./CategoriesList";
@@ -21,16 +21,14 @@ export const Homepage = () => {
 
   const axiosData = async () => {
     const res = await getMoviesAll();
-    console.log(res);
 
-    if(res != null) {
+    if (res != null) {
         setMovies(res);
     }
   };
 
   const axiosCategoriesData = async () => {
     const res = await getMovieCategories();
-    console.log(res);
     
     if(res != null) setCategories(res)
   }
@@ -43,12 +41,15 @@ export const Homepage = () => {
   return (
     <div>
       <CategoriesList categories={categories}/> 
-    <div className="movieGrid">
-      {movies?.map((item) => (
-        <div key= {item.id}> 
-        <Movie movie={item} />
-        </div>
-      ))}
+      <div className="movieGrid">
+        {movies?.map((item) => (
+          <Link to={`/detail/${item.id}`}>
+            <div key= {item.id}> 
+              <Movie movie={item} />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 };

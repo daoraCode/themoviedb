@@ -43,12 +43,13 @@ export const Homepage = () => {
   return (
     <div>
       <CategoriesList categories={categories}/> 
-    <div className="movieGrid">
-      {movies?.map((item) => (
-        <div key= {item.id}> 
-        <Movie movie={item} />
-        </div>
-      ))}
+      <div className="movieGrid">
+        {movies?.map((item) => (
+          <div key= {item.id}> 
+          <Movie movie={item} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 };

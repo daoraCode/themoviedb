@@ -8,6 +8,7 @@ import { Movie } from "./Movie";
 
 // api
 import { getMoviesAll } from "../../../domain/movie/MovieApi";
+import "./Homepage.css";
 
 // models
 import { MovieType } from "../../../domain/movie/MovieModels";
@@ -42,13 +43,12 @@ export const Homepage = () => {
   return (
     <div>
       <CategoriesList categories={categories}/> 
-      <div>
-        {movies?.map((item) => (
-          <div key= {item.id}> 
-          <Movie movie={item} />
-          </div>
-        ))}
-      </div>
+    <div className="movieGrid">
+      {movies?.map((item) => (
+        <div key= {item.id}> 
+        <Movie movie={item} />
+        </div>
+      ))}
     </div>
   )
 };

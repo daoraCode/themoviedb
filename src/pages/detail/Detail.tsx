@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import "./Detail.css"
+import React, { useState, useEffect } from "react";
+import "./Detail.css";
 
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 
-import { getMovieDetail } from "../../domain/movie/MovieApi"
-import { MovieDetailType } from "../../domain/movie/MovieModels"
+import { getMovieDetail } from "../../domain/movie/MovieApi";
+import { MovieDetailType } from "../../domain/movie/MovieModels";
 
 export const Detail = () => {
   const { idMovieDetail } = useParams();
@@ -24,15 +24,16 @@ export const Detail = () => {
 
   return (
     <>
-      {
-        movieDetail == null 
-          ?  
-        <h2>Loading...</h2> 
-          : 
-        <div className='detail' key={movieDetail.id}>
+      {movieDetail == null ? (
+        <h2>Loading...</h2>
+      ) : (
+        <div className="detail" key={movieDetail.id}>
           <h2>{movieDetail.title}</h2>
-          <img src={"https://image.tmdb.org/t/p/w500" + movieDetail.poster_path} alt='poster'/>
-          <div className='info'>
+          <img
+            src={"https://image.tmdb.org/t/p/w500" + movieDetail.poster_path}
+            alt="poster"
+          />
+          <div className="info">
             <div>
               <h4>Date de sortie:</h4>
               <p>{movieDetail.release_date}</p>
@@ -45,7 +46,7 @@ export const Detail = () => {
           <div>
             <h3>Synopsis:</h3>
             <p>{movieDetail.overview}</p>
-            <div className='genre'>
+            <div className="genre">
               <h4>Genre: </h4>
               {movieDetail.genres.map((el, key) => (
                 <div key={el.id}>
@@ -55,6 +56,7 @@ export const Detail = () => {
             </div>
           </div>
         </div>
-      }
+      )}
     </>
-  )
+  );
+};

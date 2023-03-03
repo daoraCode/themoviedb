@@ -1,31 +1,30 @@
 @font-face {
   font-family: "Poppins-Regular";
   src: local("Poppins-Regular"),
-   url("./fonts/Poppins-Regular.ttf") format("truetype");
+    url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Poppins-Medium";
   src: local("Poppins-Medium"),
-   url("./fonts/Poppins-Medium.ttf") format("truetype");
+    url("./fonts/Poppins-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Poppins-Light";
   src: local("Poppins-Light"),
-   url("./fonts/Poppins-Light.ttf") format("truetype");
+    url("./fonts/Poppins-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Poppins-SemiBold";
   src: local("Poppins-SemiBold"),
-   url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+    url("./fonts/Poppins-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: local("Poppins-Bold"),
-   url("./fonts/Poppins-Bold.ttf") format("truetype");
+  src: local("Poppins-Bold"), url("./fonts/Poppins-Bold.ttf") format("truetype");
 }
 
 body {
@@ -33,13 +32,17 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-  
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins-Bold';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins-Bold";
   font-weight: bolder;
 }

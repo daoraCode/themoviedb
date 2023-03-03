@@ -5,17 +5,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 100 !important;
 }
 
-h1 {
-  font-size: 30px;
-  font-weight: 700;
+.logo {
+  font-size: 28px;
+  letter-spacing: -1.99px;
   margin-left: 20px;
   color: aliceblue;
+  text-shadow: #ffffff5c 0 0 30px;
+  font-style: italic;
+}
+
+.link_logo {
+  text-decoration: none;
 }
 
 .search[type="text"]{
-  width: 300px;
+  width: 200px;
   height: 30px;
   padding: 10px;
   border-radius: 20px;
@@ -25,15 +33,15 @@ h1 {
 .submit[type="submit"] {
   margin-left: -50px;
   height: 30px;
-  width: 70px;
+  width: 60px;
   margin-right: 20px;
   border-radius: 20px;
   border: none;
   color: white;
   background: rgb(82,165,53);
   background: linear-gradient(90deg, rgba(82,165,53,1) 0%, rgba(255,255,255,1) 100%);
+  box-shadow: 0px 23px 100px 0px rgba(255, 255, 255, 0.95);
 }
-
 
 img {
   margin-left: 20px;

@@ -1,0 +1,30 @@
+.sidebar {
+  top: 50px;
+  position: fixed;
+  float: left;
+  width: 320px;
+  height: calc(100vh - 46.99px);
+  overflow-y: scroll;
+  padding: 2em;
+  background-color: #4c5570;
+  grid-area: sidebar;
+}
+
+.heading-text_genres {
+  font-size: 20px;
+  font-family: "Poppins-Light", sans-serif;
+  color: #ffffff;
+  margin: 10px;
+  line-height: 1.2em;
+  padding: 15px;
+  overflow: visible;
+  background-color: rgba(77, 133, 186, 0.815);
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+.separation {
+  border: 0.8px solid rgb(255, 255, 255);
+  min-width: 20%;
+  margin-bottom: 2em;
+}

@@ -6,8 +6,8 @@ import axios from "axios";
 
 export const apiKey = process.env.REACT_APP_API_KEY;
 
-export const getMoviesAll = async () => {
-  const allMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=fr-FR`;
+export const getMoviesAll = async (genre_id: string) => {
+  const allMoviesURL = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=fr-FR&sort_by=popularity.desc&with_genres=${genre_id}`;
 
   return axios
     .get<{ results: MovieType[] }>(allMoviesURL)

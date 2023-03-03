@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { getMoviesAll } from './domain/movie/MovieApi';
 import { Homepage } from './pages/homepage/components/Homepage';
 import { Header } from './shared/components/Header';
 

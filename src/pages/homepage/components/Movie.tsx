@@ -9,10 +9,10 @@ type MovieProps = {
 export const Movie = ({movie}: MovieProps) => {
     return (
         <main className='containerCards'>
-        <div className='movieCard'>
-           <img src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt='poster'/>
-            <p className="titleMovie">{movie.title}</p>
-        </div>
+            <div className='movieCard'>
+            <img src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt='poster'/>
+                <p className="titleMovie">{movie.title}</p>
+            </div>
         </main>
     )
 }

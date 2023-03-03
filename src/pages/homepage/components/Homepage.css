@@ -1,27 +1,26 @@
 .movieGrid {
     display: grid;
-    grid-gap: 5px;
-    /* grid-template-columns: repeat(4, 1fr); */
-    
+    grid-gap: 20px;
     grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-    
-    /* modifications ! */
     margin: 6em;
-    /* background-color: aquamarine; */
-    /* background-color: #20bf6b; */
-    /* severin styles ! */
-    /* margin-top: 20px; */
-    /* overflow: hidden; */
 }
 
-/* modifications! */
+.main-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 200px auto;
+    grid-template-areas: 
+    'header header'
+    'sidebar content'
+  }  
+
 .grid-item {
     grid-area: content;
 }
 
-/* modifications! */
 .movie_link {
     font-weight: bolder;
     text-decoration: none;

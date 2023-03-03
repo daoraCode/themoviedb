@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./Detail.css"
 
-// react-router-dom
 import { useParams } from "react-router-dom"
 
-// domain
 import { getMovieDetail } from "../../domain/movie/MovieApi"
 import { MovieDetailType } from "../../domain/movie/MovieModels"
 
@@ -56,7 +54,6 @@ export const Detail = () => {
                 </div>
               ))}
             </div>
-            
           </div>
         </div>
       }

@@ -38,7 +38,7 @@ export const Homepage = () => {
   }, []);
 
   return (
-    <>
+    <div className="main-grid">
       <Banner />
       <CategoriesList categories={categories}/> 
       <div className="grid-item">
@@ -52,6 +52,6 @@ export const Homepage = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 };

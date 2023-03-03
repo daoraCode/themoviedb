@@ -5,10 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* modifications! */
   position: fixed;
-  z-index: 1000 !important;
+  z-index: 100 !important;
 }
 
 .logo {
@@ -17,6 +15,11 @@
   margin-left: 20px;
   color: aliceblue;
   text-shadow: #ffffff5c 0 0 30px;
+  font-style: italic;
+}
+
+.link_logo {
+  text-decoration: none;
 }
 
 .search[type="text"]{
@@ -37,12 +40,8 @@
   color: white;
   background: rgb(82,165,53);
   background: linear-gradient(90deg, rgba(82,165,53,1) 0%, rgba(255,255,255,1) 100%);
-
-  /* modifications */
-  /* severin */
   box-shadow: 0px 23px 100px 0px rgba(255, 255, 255, 0.95);
 }
-
 
 img {
   margin-left: 20px;

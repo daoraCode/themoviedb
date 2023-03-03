@@ -15,19 +15,12 @@
     border-radius: 10px ;
     height: 265px;
     box-shadow: 0 0.2rem 0.4rem rgb(11, 10, 10);
-
-    /* modifications severin !*/
-    /* margin set to auto */
     margin: auto;
-    /* width disbaled */
-    /* width: 200px; */
 }
 
 .titleMovie {
     text-align: center;
     color: white;
-
-    /* modifications sidebar styles */
     font-size: 17px;
     margin-top: 9px;
     margin-bottom: 2em;

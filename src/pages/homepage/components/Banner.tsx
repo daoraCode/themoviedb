@@ -1,6 +1,5 @@
 import React from 'react'
-import banner_img from '../../../images/movie-banner.svg'
-
+import banner_img from '../../../images/movie-banner.png'
 
 import './Banner.css'
 

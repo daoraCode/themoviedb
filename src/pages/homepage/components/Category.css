@@ -1,0 +1,16 @@
+.genre-btn {
+    all: unset;
+    margin: 6px auto;
+    color: #FFF;
+    padding: 2px 9px;
+    font-weight: 700;
+    font-size: 19px;
+    transition: all .16s ease-in-out;
+    margin: 3.7px;
+    cursor: pointer;
+}
+
+.genre-btn:hover {
+    background-color: #a29bb849;
+    border-radius: 5px;
+}

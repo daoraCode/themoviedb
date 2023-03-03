@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CategoriesList } from "./CategoriesList";
 import { Movie } from "./Movie";
+import { Banner } from './Banner';
 import { getMoviesAll } from "../../../domain/movie/MovieApi";
 import "./Homepage.css";
 import { MovieType } from "../../../domain/movie/MovieModels";
@@ -36,17 +37,20 @@ export const Homepage = () => {
   }
 
   return (
-    <div>
-      <CategoriesList categories={categories} handleGenreClick={handleGenreClick}/>
+    <div className="main-grid">
+      <Banner />
+      <CategoriesList categories={categories} handleGenreClick={handleGenreClick}/> 
+      <div className="grid-item">
       <div className="movieGrid">
         {movies?.map((item) => (
-          <Link to={`/detail/${item.id}`}>
-            <div key={item.id}>
+          <Link className="movie_link" to={`/detail/${item.id}`}>
+            <div key= {item.id}> 
               <Movie movie={item} />
             </div>
           </Link>
         ))}
+        </div>
       </div>
     </div>
-  );
+  )
 };

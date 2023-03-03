@@ -1,5 +1,6 @@
-import React from "react";
-import { CategoryType } from "../../../domain/category/CategoryType";
+import React from 'react'
+import { CategoryType } from "../../../domain/category/CategoryType"
+import './Category.css';
 
 type CategoryProps = {
   category: CategoryType;
@@ -7,5 +8,5 @@ type CategoryProps = {
 };
 
 export const Category = ({ category, handleGenreClick }: CategoryProps,) => {
-  return <button onClick={() => handleGenreClick(String(category.id))}>{category.name}</button>;
+  return <button className="genre-btn" onClick={() => handleGenreClick(String(category.id))}>{category.name}</button>;
 };

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import "./Detail.css"
 
 // react-router-dom
 import { useParams, useNavigate } from "react-router-dom"
@@ -37,20 +38,32 @@ export const Detail = () => {
           ?  
         <h2>Loading...</h2> 
           : 
-        <div key={movieDetail.id}>
+        <div className='detail' key={movieDetail.id}>
           <h2>{movieDetail.title}</h2>
           <img className="" src={"https://image.tmdb.org/t/p/w500" + movieDetail.poster_path} alt='poster'/>
-          <div className="">
-            <p>{movieDetail.overview}</p>
-            <p>{movieDetail.release_date}</p>
+          <div className='info'>
             <div>
+              <h4>Date de sortie:</h4>
+              <p>{movieDetail.release_date}</p>
+            </div>
+            <div>
+              <h4>Note:</h4>
+              <p>{movieDetail.vote_average}</p>
+            </div>
+          </div>
+          <div>
+            <h3>Synopsis:</h3>
+            <p>{movieDetail.overview}</p>
+            <div className='genre'>
+              <h4>Genre: </h4>
               {movieDetail.genres.map((el, key) => (
                 <div key={el.id}>
+                  
                   <p>{el.name}</p>
                 </div>
               ))}
             </div>
-            <p>{movieDetail.vote_average}</p>
+            
           </div>
         </div>
       }

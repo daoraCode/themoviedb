@@ -2,6 +2,7 @@ import React from "react";
 import { Category } from "./Category";
 import { CategoryType } from "../../../domain/category/CategoryType";
 import "./CategoriesList.css";
+import { PageType } from "../../../domain/page/PageModel";
 
 type CategoriesListProps = {
   categories: CategoryType[];

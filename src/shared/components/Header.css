@@ -20,7 +20,7 @@
 }
 
 .search[type="text"]{
-  width: 300px;
+  width: 200px;
   height: 30px;
   padding: 10px;
   border-radius: 20px;
@@ -30,7 +30,7 @@
 .submit[type="submit"] {
   margin-left: -50px;
   height: 30px;
-  width: 70px;
+  width: 60px;
   margin-right: 20px;
   border-radius: 20px;
   border: none;

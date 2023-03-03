@@ -13,11 +13,9 @@ export const Homepage = () => {
   const [categories, setCategories] = useState<CategoryType[]>([]);
 
   const axiosData = async () => {
-    const res = await getMoviesAll();
+    const res = await getMoviesAll("");
 
-    if (res != null) {
-      setMovies(res);
-    }
+    if (res != null) setMovies(res);
   };
 
   const axiosCategoriesData = async () => {
@@ -31,9 +29,15 @@ export const Homepage = () => {
     axiosCategoriesData();
   }, []);
 
+  const handleGenreClick = async (genre_id: string) => {
+    const res = await getMoviesAll(genre_id)
+    
+    if (res != null) setMovies(res)
+  }
+
   return (
     <div>
-      <CategoriesList categories={categories} />
+      <CategoriesList categories={categories} handleGenreClick={handleGenreClick}/>
       <div className="movieGrid">
         {movies?.map((item) => (
           <Link to={`/detail/${item.id}`}>

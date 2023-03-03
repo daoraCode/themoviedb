@@ -1,0 +1,15 @@
+.page-btn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #4c7cac;
+  color: white;
+  width: 100px;
+  height: 30px;
+  padding: 5px 3px;
+  border-radius: 10px;
+}

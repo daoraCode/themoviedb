@@ -8,13 +8,16 @@ import "./Homepage.css";
 import { MovieType } from "../../../domain/movie/MovieModels";
 import { CategoryType } from "../../../domain/category/CategoryType";
 import { getMovieCategories } from "../../../domain/category/CategoryApi";
+import { ButtonPage } from "./ButtonPage";
+import { PageData } from "../../../domain/page/PageData";
+import { ButtonPageList } from "./ButtonPageList";
 
 export const Homepage = () => {
   const [movies, setMovies] = useState<MovieType[]>([]);
   const [categories, setCategories] = useState<CategoryType[]>([]);
 
   const axiosData = async () => {
-    const res = await getMoviesAll("");
+    const res = await getMoviesAll("1", "");
 
     if (res != null) setMovies(res);
   };
@@ -31,7 +34,13 @@ export const Homepage = () => {
   }, []);
 
   const handleGenreClick = async (genre_id: string) => {
-    const res = await getMoviesAll(genre_id);
+    const res = await getMoviesAll("1", genre_id);
+
+    if (res != null) setMovies(res);
+  };
+
+  const handlePageClick = async (page_id: string) => {
+    const res = await getMoviesAll(page_id, "");
 
     if (res != null) setMovies(res);
   };
@@ -52,6 +61,9 @@ export const Homepage = () => {
               </div>
             </Link>
           ))}
+        </div>
+        <div>
+          <ButtonPageList pages={PageData} handlePageClick={handlePageClick} />
         </div>
       </div>
     </div>

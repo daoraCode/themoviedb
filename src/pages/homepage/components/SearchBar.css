@@ -65,6 +65,7 @@ input:focus {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  z-index: 10;
 }
 
 .movies:-webkit-scrollbar{

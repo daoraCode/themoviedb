@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 
-.search[type="text"]{
+/* .search[type="text"]{
   width: 200px;
   height: 30px;
   padding: 10px;
@@ -41,7 +41,7 @@
   background: rgb(82,165,53);
   background: linear-gradient(90deg, rgba(82,165,53,1) 0%, rgba(255,255,255,1) 100%);
   box-shadow: 0px 23px 100px 0px rgba(255, 255, 255, 0.95);
-}
+} */
 
 img {
   margin-left: 20px;

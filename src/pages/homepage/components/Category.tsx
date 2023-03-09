@@ -1,7 +1,6 @@
 import React from "react";
 import { CategoryType } from "../../../domain/category/CategoryType";
 import "./Category.css";
-import { PageType } from "../../../domain/page/PageModel";
 
 type CategoryProps = {
   category: CategoryType;

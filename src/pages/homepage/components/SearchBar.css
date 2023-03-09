@@ -1,0 +1,72 @@
+.dropdown-container {
+  position: relative;
+}
+input {
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 40px;
+  margin-top: 0.5em;
+  background-color: #4c5570;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+.imgSearch {
+  width: 100px;
+  height: 140px;
+  position: left;
+  margin: 0;
+}
+
+.titleSearch {
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+}
+
+.movie {
+  width: 600px;
+  background-color: #292929;
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  align-self: flex-start;
+}
+
+.dropdown {
+  border-radius: 5px;
+  position: absolute;
+  top: 135px;
+  left: 42vw;
+  display: inline-block;
+  margin-right: 10px;
+  scroll-behavior: smooth;
+}
+
+.movies {
+  position: absolute;
+  top: 160px;
+  left: 42vw;
+  max-height: 80vh;
+  overflow-y: scroll;
+  border-radius: 10px;
+  margin-top: 18px;
+  width: 600px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 345px;
+  z-index: -400;
+}

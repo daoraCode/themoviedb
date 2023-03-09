@@ -1,0 +1,67 @@
+input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 40px;
+  /* z-index: 2; */
+  margin-top: 0.5em;
+}
+
+.imgSearch {
+  width: 50px;
+  height: 70px;
+  position: left;
+  margin: 0;
+}
+
+.titleSearch {
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+}
+
+.movie {
+  width: 250px;
+  background-color: #4c5570;
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  align-self: flex-start;
+}
+
+.dropdown {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  margin-right: 10px;
+  scroll-behavior: smooth;
+}
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 0.3s ease-in-out;
+} */
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+  max-height: 50px;
+} */
+
+.movies {
+  max-height: 80vh;
+  overflow-y: scroll;
+  border-radius: 10px;
+  margin-top: 18px;
+  width: 250px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

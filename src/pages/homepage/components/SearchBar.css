@@ -39,6 +39,7 @@ input:focus {
   overflow-y: auto;
   display: flex;
   align-self: flex-start;
+  
 }
 
 .dropdown {
@@ -49,6 +50,7 @@ input:focus {
   display: inline-block;
   margin-right: 10px;
   scroll-behavior: smooth;
+  
 }
 
 .movies {
@@ -61,6 +63,12 @@ input:focus {
   margin-top: 18px;
   width: 600px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movies:-webkit-scrollbar{
+  width: 0;
 }
 
 .banner {

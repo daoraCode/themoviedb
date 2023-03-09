@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./SearchBar"
+import "../../pages/homepage/components/SearchBar";
 import "./Header.css";
-import SearchBar from "./SearchBar";
-
 
 export const Header = () => {
   return (
@@ -11,9 +9,6 @@ export const Header = () => {
       <Link className="link_logo" to={`/`}>
         <h1 className="logo">MovieDB</h1>
       </Link>
-      <div>
-        <SearchBar/>
-      </div>
     </div>
   );
 };

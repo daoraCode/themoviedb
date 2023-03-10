@@ -10,6 +10,7 @@ import { CategoryType } from "../../../domain/category/CategoryType";
 import { getCategories } from "../../../domain/category/CategoryApi";
 import { PageData } from "../../../domain/page/PageData";
 import { ButtonPageList } from "./ButtonPageList";
+import { MoviesList } from "./MoviesList";
 
 export const Homepage = () => {
   const [movies, setMovies] = useState<MovieType[]>([]);
@@ -45,26 +46,16 @@ export const Homepage = () => {
   };
 
   return (
-    <div className="main-grid">
+    <>
       <SearchBar />
+      <div className="main-grid">
       <CategoriesList
         categories={categories}
         handleGenreClick={handleGenreClick}
       />
-      <div className="grid-item">
-        <div className="movieGrid">
-          {movies?.map((item) => (
-            <Link
-              className="movie_link"
-              key={item.id}
-              to={`/detail/${item.id}`}
-            >
-              <Movie movie={item} />
-            </Link>
-          ))}
-        </div>
-          <ButtonPageList pages={PageData} handlePageClick={handlePageClick} />
+      <MoviesList movies={movies}/>
+      <ButtonPageList pages={PageData} handlePageClick={handlePageClick} />
       </div>
-    </div>
+    </>
   );
 };

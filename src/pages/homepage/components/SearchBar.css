@@ -2,7 +2,7 @@
   position: relative;
 }
 input {
-  width: 600px;
+  width: 30vw;
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -30,7 +30,7 @@ input:focus {
 }
 
 .movie {
-  width: 600px;
+  width: 30vw;
   background-color: #292929;
   display: flex;
   gap: 30px;
@@ -61,7 +61,7 @@ input:focus {
   overflow-y: scroll;
   border-radius: 10px;
   margin-top: 18px;
-  width: 600px;
+  width: 30vw;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   scrollbar-width: none;
   -ms-overflow-style: none;

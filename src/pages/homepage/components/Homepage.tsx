@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { CategoriesList } from "./CategoriesList";
-import { Movie } from "./Movie";
 import { SearchBar } from "./SearchBar";
 import { getMoviesAll } from "../../../domain/movie/MovieApi";
 import "./Homepage.css";

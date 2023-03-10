@@ -10,7 +10,7 @@ export const Detail = () => {
   const { idMovieDetail } = useParams();
   const [movieDetail, setMovieDetail] = useState<MovieDetailType | null>(null);
 
-  const axiosDetailData = async () => {
+  const detailApi = async () => {
     const res = await getMovieDetail(String(idMovieDetail));
 
     if (res != null) {
@@ -19,7 +19,7 @@ export const Detail = () => {
   };
 
   useEffect(() => {
-    axiosDetailData();
+    detailApi();
   }, []);
 
   return (

@@ -3,6 +3,7 @@ import { MovieType } from "../../../domain/movie/MovieModels";
 import { Movie } from "./Movie";
 import { Link } from "react-router-dom";
 import "./MoviesList.css"
+import { SearchBar } from "./SearchBar";
 
 type MovieListProps = {
   movies: MovieType[];

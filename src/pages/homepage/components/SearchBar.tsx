@@ -44,8 +44,8 @@ export const SearchBar = () => {
         </div>
         <div className="movies">
           {movies.map((movie) => (
-            <Link to={`/detail/${movie.id}`}>
-              <div key={movie.id} className="movie">
+            <Link key={movie.id} to={`/detail/${movie.id}`}>
+              <div className="movie">
                 <img
                   className="imgSearch"
                   src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}

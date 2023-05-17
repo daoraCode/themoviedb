@@ -12,7 +12,7 @@ export const Detail = () => {
 
   const axiosDetailData = async () => {
     const res = await getMovieDetail(String(idMovieDetail));
-
+    
     if (res != null) {
       setMovieDetail(res);
     }
@@ -48,7 +48,7 @@ export const Detail = () => {
             <p>{movieDetail.overview}</p>
             <div className="genre">
               <h4>Genre: </h4>
-              {movieDetail.genres.map((el, key) => (
+              {movieDetail.genres.map((el) => (
                 <div key={el.id}>
                   <p>{el.name}</p>
                 </div>

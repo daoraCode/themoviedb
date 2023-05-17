@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import { MovieType } from "./MovieModels";
 
 import axios from "axios";
@@ -10,10 +11,18 @@ export const getMoviesAll = async (
   page_id: string = "1",
   genre_id?: string
 ) => {
-  const allMoviesURL = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=fr-FR&sort_by=popularity.desc&page=${page_id}&with_genres=${genre_id}`;
+  const allMoviesURL = `https://api.themoviedb.org/3/discover/movie?&language=fr-FR&sort_by=popularity.desc&`;
+
+  // const allMoviesURL = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=fr-FR&sort_by=popularity.desc&page=${page_id}&with_genres=${genre_id}`; se puede hacer de las dos maneras 
 
   return axios
-    .get<{ results: MovieType[] }>(allMoviesURL)
+    .get<{ results: MovieType[] }>(allMoviesURL, {
+      params:{
+        api_key: apiKey, 
+        with_genres: genre_id,
+        page: page_id
+      }
+    })
     .then((response) => {
       console.log(response);
       return response.data.results;

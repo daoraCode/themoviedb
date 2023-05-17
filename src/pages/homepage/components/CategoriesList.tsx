@@ -19,7 +19,7 @@ export const CategoriesList = ({
       {categories.map((item) => (
         <div key={item.id}>
           <Category category={item} handleGenreClick={handleGenreClick} />
-        </div>
+        </div> 
       ))}
     </div>
   );
